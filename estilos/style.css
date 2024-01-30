@@ -66,7 +66,7 @@ header > h1 {
     letter-spacing: 2px; /*ESPAÇAMENTO ENTRE AS LETRAS*/
 }
 
-p#titulo {
+header p#titulo {
     padding: 20px;
     max-width: 600px;
     margin: auto;
@@ -83,7 +83,7 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 15px 15px 16px 15px;
     background-color: var(--cor4);
     box-shadow: 0px 5px 5px #00000028;
     transition-duration: 0.5s;
@@ -302,8 +302,9 @@ ul > li:hover {
     background-color: black;
 }
 
-p#final {
+ article p {
     text-align: center;
+    text-indent: 0px;
 }
 
 footer {
@@ -332,14 +333,23 @@ footer a:active {
 }
 
 /* ALINHAMENTO DO CONTEUDO EXTRA */
-@media (max-width: 600px) and (min-width: 300px) {
+@media (max-width: 600px) and (min-width: 50px) {
     aside > ul {
         columns: 1;
     }
 }
 
-/* CENTRALIZANDO PARA MELHOR LEITURA */
-@media (max-width: 410px) and (min-width: 200px) {
+/* LEITURA TELAS MEDIAS */
+@media (max-width: 550px) and (min-width: 50px) {
+    main h2 {
+        background-color: var(--cor7);
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+
+/* CENTRALIZANDO PARA MELHOR LEITURA EM TELAS PEQUENAS */
+@media (max-width: 410px) and (min-width: 50px) {
     header {
         box-shadow: 0px 5px 5px #00000028;
     }
@@ -374,9 +384,6 @@ footer a:active {
     }
 
     main h2 {
-        background-color: var(--cor7);
-        text-align: center;
-        border-radius: 5px;
         font-size: 1.1em;
     }
 
