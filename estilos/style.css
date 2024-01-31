@@ -349,7 +349,7 @@ footer a:active {
 }
 
 /* CENTRALIZANDO PARA MELHOR LEITURA EM TELAS PEQUENAS */
-@media (max-width: 410px) and (min-width: 50px) {
+@media (max-width: 412px) and (min-width: 50px) {
     header {
         box-shadow: 0px 5px 5px #00000028;
     }
