@@ -85,14 +85,14 @@ nav {
     flex-wrap: wrap;
     padding: 15px 15px 16px 15px;
     background-color: var(--cor4);
-    box-shadow: 0px 5px 5px #00000028;
+    box-shadow: 0px 2px 2px #00000028;
     transition-duration: 0.5s;
 }
 
 #div1 {
     margin-right: 5px;
 }
-
+/* QUANDO O MOUSE PARA EM CIMA DO NAV, TODOS OS LINKS RECEBEM O ESTILO ABAIXO */
 nav:hover {
     background-color: var(--cor3);
     a { 
@@ -127,7 +127,7 @@ nav a:active {
 }
 
 nav a:visited {
-    background-color: var(--cor1);
+    background-color: var(--cor8);
     color: white;
 }
                
@@ -175,12 +175,12 @@ main {
     margin: auto;
 
     padding: 20px;
-    margin-top: 8px;
+    margin-top: 20px;
     margin-bottom: 30px;
     font-family: var(--fonte-padrao);
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #00000053;
+    box-shadow: 2px 3px 10px #00000053;
     border-radius: 10px;
 }
 
@@ -302,7 +302,7 @@ ul > li:hover {
     background-color: black;
 }
 
- article p {
+p#despedida {
     text-align: center;
     text-indent: 0px;
 }
@@ -319,7 +319,7 @@ footer {
 footer a {
     color: white;
     font-weight: bolder;
-    text-decoration: none;
+    text-decoration: underline;
     transition-duration: 0.01s;
 }
 
@@ -330,6 +330,13 @@ footer a:hover {
 
 footer a:active {
     color: var(--cor3);
+}
+
+/* RETIRANDO ESTILO QUE SO FUNCIONA EM TELAS MAIORES */
+@media (max-width: 1000px) {
+    main {
+        border-radius: 0px;
+    }
 }
 
 /* ALINHAMENTO DO CONTEUDO EXTRA */
