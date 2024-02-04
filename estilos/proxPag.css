@@ -3,6 +3,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    font-size: 3vw;
     background-color: #ebe5c549;
     text-align: center;
     text-transform: uppercase;
@@ -11,3 +12,4 @@ body {
 p {
     padding: 30px 50px 0px 50px;
 }
+
