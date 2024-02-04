@@ -19,9 +19,9 @@
 :root {
     /* FONTES */
     --fonte-padrao: Arial, Verdana, sans-serif;
-    --fonte-quadrada: 'forced', sans-serif;
-    --fonte-android: 'android', cursive, sans-serif;
-    --fonte-titulo: 'Bebas Neue', verdana, sans-serif;
+    --fonte-quadrada: 'forced', 'Courier New', Courier, monospace;
+    --fonte-android: 'android', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, cursive, sans-serif;
+    --fonte-titulo: 'Bebas Neue', Verdana, Geneva, Tahoma, sans-serif;
 
     /* CORES */
     --cor0: #A4A5A6;
@@ -40,7 +40,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    transition-duration: 0.5s;
+    transition-duration: 0.5s; 
 }
 
 body {
