@@ -14,10 +14,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: 2vw;
-    background-attachment: fixed;
-    background-image: linear-gradient(70deg, black, purple, red);
     text-align: center;
     text-transform: uppercase;
+    background-attachment: fixed;
+    background-size: 300% 300%;/* AUMENTA O FUNDO */
+    background-image: linear-gradient(35deg, black, blue, purple, red);
+    animation: fundo 10s ease-in-out infinite;/* ANIMAÇÃO DO FUNDO */
     position: relative;/* CENTRALIÇÃO VERTICAL */
 }
 
@@ -42,25 +44,22 @@ button {
     height: 40px;
     min-width: 300px;
     border: none;
-    border-radius: 5px;
     font-weight: bolder;
     text-transform: uppercase;
-    opacity: 1;
+    opacity: 0;
     transition-duration: 0.5s;/* TRANSCIÇÃO HOVER */
-    animation-duration: 5s;/* TEMPO DA ANIMAÇÃO */
-    animation-name: botao;/* A ANIMAÇÃO */
+    animation: botao 10s ease-out infinite;
 }
 
 button:hover {
     background-color: #16c4e3;
-    border-radius: 10px;
-    opacity: 0.8;
     cursor: pointer;/* DEIXA CLARO QUE É CLICAVEL */
 }
 
 div {
     position: absolute;/* CENTRALIÇÃO VERTICAL */
-    max-height: 200px;
+    margin-bottom: 100px;
+    max-height: 300px;
     width: 70%;
     left: 50%;
     top: 50%;
@@ -78,13 +77,44 @@ p {
     padding-bottom: 10px;
 }
 
-@keyframes botao {/* ANIMAÇÃO */
-    from {
-        margin-top: 310px;/* SAI DE CIMA */
+/* ANIMAÇÃO */
+@keyframes fundo {
+    0% {
+        background-position: 0% 25%;
     }
 
-    to {
-        margin-top: 500px;/* PARA EM BAIXO */
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 25%;
+    }
+}
+
+@keyframes botao {
+
+    0% {/* COMEÇO */
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+
+    50% {/* MEIO */
+        opacity: 1;
+        border-radius: 5px;
+    }
+
+    100% {/* FIM */
+        opacity: 0.7;
+        border-radius: 20px;
     }
 }
 
@@ -111,7 +141,7 @@ p {
 }
 
 /* TELAS PEQUENAS AJUSTE DE LETRAS */
-@media (max-width:400px) {
+@media (max-width:600px) {
     body {
         font-size: 3.5vw;
     }
