@@ -1,15 +1,123 @@
 @charset "UTF-8";
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {/* TODO O SITE TERA 100% DE VISIBILIDADE */
+    height: 100vh;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    font-size: 3vw;
-    background-color: #ebe5c549;
+    font-size: 2vw;
+    background-attachment: fixed;
+    background-image: linear-gradient(70deg, black, purple, red);
     text-align: center;
     text-transform: uppercase;
+    position: relative;/* CENTRALIÇÃO VERTICAL */
+}
+
+a {
+    padding: 10px 150px 10px 150px;/* MAIOR AREA DE CLIQUE */
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:active {
+    color: #22ff00;
+    text-decoration: underline;
+}
+
+button {
+    margin: auto;/* CENTRALIZA NA HORIZONTAL */
+    margin-top: 500px;/* DESCE O BOTÃO */
+    height: 40px;
+    min-width: 300px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    opacity: 1;
+    transition-duration: 0.5s;/* TRANSCIÇÃO HOVER */
+    animation-duration: 5s;/* TEMPO DA ANIMAÇÃO */
+    animation-name: botao;/* A ANIMAÇÃO */
+}
+
+button:hover {
+    background-color: #16c4e3;
+    border-radius: 10px;
+    opacity: 0.8;
+    cursor: pointer;/* DEIXA CLARO QUE É CLICAVEL */
+}
+
+div {
+    position: absolute;/* CENTRALIÇÃO VERTICAL */
+    max-height: 200px;
+    width: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+}
+
+h1 {
+    padding-top: 10px;
 }
 
 p {
-    padding: 30px 50px 0px 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+@keyframes botao {/* ANIMAÇÃO */
+    from {
+        margin-top: 310px;/* SAI DE CIMA */
+    }
+
+    to {
+        margin-top: 500px;/* PARA EM BAIXO */
+    }
+}
+
+/* TELAS GRANDES AJUSTE DE LETRAS */
+@media (max-width: 1200px) and (min-width:700px) {
+    body {
+        font-size: 2.5vw;
+    }
+
+    div {
+        width: 80%;
+    }
+}
+
+/* TELAS MEDIAS AJUSTE DE LETRAS */
+@media (max-width:700px) {
+    body {
+        font-size: 3vw;
+    }
+
+    div {
+        width: 85%;
+    }
+}
+
+/* TELAS PEQUENAS AJUSTE DE LETRAS */
+@media (max-width:400px) {
+    body {
+        font-size: 3.5vw;
+    }
+
+    div {/* CENTRALIÇÃO PARA MELHOR LEITURA */
+        min-width: 100%;
+        border-radius: 0px;
+    }
+}
