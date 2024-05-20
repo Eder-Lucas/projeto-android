@@ -6,83 +6,61 @@
     box-sizing: border-box;
 }
 
-html, body {/* TODO O SITE TERA 100% DE VISIBILIDADE */
+html, body {
+    width: 100vw;
     height: 100vh;
 }
 
 body {
+    position: relative;/* centralização vertical */
+    background-color: #5516a2;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    font-size: 2vw;
     text-align: center;
-    text-transform: uppercase;
-    background-attachment: fixed;
-    background-size: 300% 300%;/* AUMENTA O FUNDO */
-    background-image: linear-gradient(35deg, black, blue, purple, red);
-    animation: fundo 10s ease-in-out infinite;/* ANIMAÇÃO DO FUNDO */
-    position: relative;/* CENTRALIÇÃO VERTICAL */
+    font-variant: small-caps;
 }
 
-a {
-    padding: 10px 150px 10px 150px;/* MAIOR AREA DE CLIQUE */
-    color: black;
+div#manutencao {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90vw;
+    height: 225px;
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px #00000079;
+
+    transform: translate(-50%, -50%);
+}
+
+div#manutencao h1 {
+    padding-top: 10px;
+    margin: 50px 0px;
+}
+
+div#manutencao a { 
+    padding: 15px;
+    text-align: center;
     text-decoration: none;
+    background-color: #0c0039;
+    color: white;
+    border-radius: 5px;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
-a:visited {
-    color: black;
+div#manutencao a:visited {
+    color: white;
 }
 
-a:active {
-    color: #b3cb00;
+div#manutencao a:active {
+    color: #0c0039;
     text-decoration: underline;
 }
 
-button {
-    margin: auto;/* CENTRALIZA NA HORIZONTAL */
-    margin-top: 70vh;/* DESCE O BOTÃO */
-    height: 40px;
-    min-width: 300px;
-    border: none;
-    font-weight: bolder;
-    text-transform: uppercase;
-    opacity: 0;
-    transition-duration: 0.5s;/* TRANSCIÇÃO HOVER */
-    animation: botao 10s ease-out infinite;
-}
-
-button:hover {
-    background-color: #16c4e3;
-    cursor: pointer;/* DEIXA CLARO QUE É CLICAVEL */
-}
-
-div#b {
-    margin: 0px;
-    background-color: transparent;
-}
-
-div#a {
-    position: absolute;/* CENTRALIÇÃO VERTICAL */
-    margin-bottom: 100px;
-    max-height: 300px;
-    width: 70%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 10px;
-}
-
-h1 {
-    padding-top: 10px;
-}
-
-p {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/* ANIMAÇÃO */
+/* animação */
 @keyframes fundo {
     0% {
         background-position: 0% 25%;
@@ -105,60 +83,20 @@ p {
     }
 }
 
-@keyframes botao {
-
-    0% {/* COMEÇO */
-        opacity: 0.7;
-        border-radius: 20px;
-    }
-
-    50% {/* MEIO */
-        opacity: 1;
-        border-radius: 5px;
-    }
-
-    100% {/* FIM */
-        opacity: 0.7;
-        border-radius: 20px;
-    }
-}
-
-/* TELAS GRANDES AJUSTE DE LETRAS */
-@media (max-width: 1200px) and (min-width:700px) {
+@media screen and (min-width:768px) {
     body {
-        font-size: 2.5vw;
+        background-attachment: fixed;
+        background-size: 300% 300%;/* aumenta o fundo */
+        background-image: linear-gradient(35deg, black, blue, purple, red);
+        animation: fundo 8s ease infinite;/* animação do fundo */
     }
 
-    div#a {
-        width: 80%;
-    }
-}
-
-/* TELAS MEDIAS AJUSTE DE LETRAS */
-@media (max-width:700px) {
-    body {
-        font-size: 3vw;
+    div#manutencao {
+        width: 500px;
     }
 
-    div {
-        width: 85%;
-    }
-}
-
-/* TELAS PEQUENAS AJUSTE DE LETRAS */
-@media (max-width:600px) {
-    body {
-        font-size: 3.5vw;
-    }
-
-    div#a {/* CENTRALIÇÃO PARA MELHOR LEITURA */
-        min-width: 100%;
-        border-radius: 0px;
-    }
-}
-
-@media (min-width:700px) and (orientation: landscape) {
-    button {
-        margin-top: 80vh;
+    div#manutencao a:hover {
+        background-color: #3700ff;
+        border-radius: 10px;
     }
 }
