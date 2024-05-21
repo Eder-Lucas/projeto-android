@@ -32,6 +32,7 @@ div#manutencao {
     box-shadow: 2px 2px 12px #00000079;
 
     transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
 }
 
 div#manutencao h1 {
@@ -80,6 +81,12 @@ div#manutencao a:active {
 
     100% {
         background-position: 0% 25%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    div#manutencao {
+        font-size: 4.2vw;
     }
 }
 
