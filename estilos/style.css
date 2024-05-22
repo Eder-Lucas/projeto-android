@@ -36,11 +36,10 @@
 
 }
 
-* {/* FAZ O ALGUMAS FUNÇÕES OCUPAREM TODO O ESPAÇO DO BODY */
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    transition-duration: 0.5s; 
+    box-sizing: border-box; 
 }
 
 body {
@@ -49,7 +48,8 @@ body {
 }
 
 header {
-    width: 100%; /* REGRA CSS PARA OCUPAR TODO O BODY / *{} */
+    min-width: 300px; 
+    max-width: 100vw;
     min-height: 150px;
     color: white;
     background-color: var(--cor1);
@@ -62,11 +62,11 @@ header > h1 {
     font-weight: normaL;
     color: white;
     text-align: center;
-    text-transform: uppercase; /*COLOCA O TEXTO EM MAIUSCULO*/
-    letter-spacing: 2px; /*ESPAÇAMENTO ENTRE AS LETRAS*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-header p#titulo {
+header p {
     padding: 20px;
     max-width: 600px;
     margin: auto;
@@ -74,9 +74,9 @@ header p#titulo {
     text-align: center;
     font-size: 1.3em;
     text-indent: 0px;
-    line-height: 1.3em;/* ALTURA DAS LINHAS PARA TODOS OS ELEMENTOS P */
-    word-spacing: 1px;/* ESPAÇO ENTRE AS PALAVRAS */
-    letter-spacing: 0.5px;/* ESPAÇO ENTRE AS LETRAS */ 
+    line-height: 1.3em;
+    word-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 nav {
@@ -89,10 +89,10 @@ nav {
     transition-duration: 0.5s;
 }
 
-#div1 {
+nav > #div1 {
     margin-right: 5px;
 }
-/* QUANDO O MOUSE PARA EM CIMA DO NAV, TODOS OS LINKS RECEBEM O ESTILO ABAIXO */
+
 nav:hover {
     background-color: var(--cor3);
     a { 
@@ -130,58 +130,14 @@ nav a:visited {
     background-color: var(--cor8);
     color: white;
 }
-               
-a.externo { 
-    padding: 2px;
-    font-family: var(--fonte-quadrada);
-    text-decoration: none;/* PERDE ALGUNS ELEMENTOS DOS LINKS */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--cor1);
-    background-color: var(--cor4);
-    transition: 0.2s;
-}
-
-a.externo:hover {/* MOUSE EM CIMA */
-    color: #00ff3c;
-    background-color: black;
-    text-decoration: underline;
-    border-radius: 4px;
-}
-
-a.externo:active {/* QUANDO CLICADO */
-    color: black;
-    background-color: #00ff3c;
-}
-
-a.externo:visited {/* QUANDO JÁ FOI VISITADO */
-    background-color: var(--cor8);
-    color: white;
-}
-
-a.externo::after {/* PSEUDO-CLASSE */
-    content: '\00A0\1F517';/* SIMBOLO DE LINK / 00A0 É UM ESPAÇO */
-}
-
-strong {
-    font-size: 1.1em;
-    color: var(--cor1);
-    text-shadow: 5px 0px 13px #0000005f;
-}
 
 main {
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 100vw;
     margin: auto;
-
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 30px;
     font-family: var(--fonte-padrao);
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 2px 3px 10px #00000053;
-    border-radius: 10px;
 }
 
 main h1 {
@@ -189,6 +145,7 @@ main h1 {
     font-weight: normal;
     font-size: 1.8em;
     color: var(--cor1);
+    text-align: center;
 }
 
 main h2 {
@@ -196,10 +153,11 @@ main h2 {
     font-family: var(--fonte-android);
     font-weight: normal;
     font-size: 1.3em;
+    background-color: var(--cor7);
     color: black;
     text-indent: 8px;
-    background-image: linear-gradient(to right, var(--cor7), transparent);
-    border-radius: 5px 0px 0px 5px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 main p {
@@ -208,6 +166,39 @@ main p {
     text-indent: 30px;
     font-size: 1em;
     line-height: 2em;
+}
+
+main strong {
+    font-size: 1.1em;
+    color: var(--cor1);
+    text-shadow: 5px 0px 13px #0000005f;
+}
+               
+main a { 
+    padding: 2px;
+    font-family: var(--fonte-quadrada);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cor1);
+    background-color: var(--cor4);
+    transition: 0.3s;
+}
+
+main a:hover {
+    color: #00ff3c;
+    background-color: black;
+    text-decoration: underline;
+    border-radius: 4px;
+}
+
+main a:active {
+    color: black;
+    background-color: #00ff3c;
+}
+
+main a::after {
+    content: '\00A0\1F517';/* SIMBOLO DE LINK / 00A0 É UM ESPAÇO */
 }
 
 main img {
@@ -220,7 +211,7 @@ main img.pequena {
     margin: auto;
 }
 
-div.video {
+main > section > article div.video {
     background-color: black;
     border: 6px solid var(--cor7);
     border-radius: 10px;
@@ -230,12 +221,18 @@ div.video {
     position: relative;
 }
 
-div.video > iframe {
+main > section > article div.video > iframe {
     position: absolute;
     top: 5%;
     left: 5%;
     width: 90%;
     height: 90%;
+}
+
+main > section > article p#despedida {
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 0px;
 }
 
 aside {
@@ -244,6 +241,11 @@ aside {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.354);
+}
+
+aside p {
+    font-size: 1em;
+    text-align: justify;
 }
 
 aside a {
@@ -267,11 +269,6 @@ aside a:hover {
     border-radius: 5px;
 }
 
-aside a:visited {
-    background-color: var(--cor8);
-    color: white;
-}
-
 aside > h3 {
     background-color: var(--cor1);
     color: white;
@@ -284,11 +281,11 @@ aside strong {
     color: black;
 }
 
-aside > ul {
+aside ul {
     font-family: var(--fonte-quadrada);
     list-style-type: '\2714';/* SEM A BARRA INVERTIDA NÃO FUNCIONA O CODIGO DA SETINHA(2714) */
     list-style-position: inside;/* BOLINHA DENTRO DO ASIDE */
-    columns: 2;/* DIVIDE EM DUAS COLUNAS */
+    columns: 1;/* DIVIDE EM DUAS COLUNAS */
 }
 
 aside li {
@@ -297,21 +294,17 @@ aside li {
     transition-duration: 0.01s;
 }
 
-ul > li:hover {
+aside ul > li:hover {
     color: var(--cor7);
     background-color: black;
 }
 
-p#despedida {
-    text-align: center;
-    text-indent: 0px;
-}
-
 footer {
     position: relative;
-    min-width: 300px;
+    min-width: 300px; 
     max-width: 100vw;
     height: 200px;
+    margin: auto;
     font-family: var(--fonte-padrao);
     background-color: black;
     color: white;
@@ -349,39 +342,7 @@ footer a:active {
     color: var(--cor3);
 }
 
-/* RETIRANDO ESTILO QUE SO FUNCIONA EM TELAS MAIORES */
-@media (max-width: 1000px) {
-    main {
-        border-radius: 0px;
-    }
-}
-
-/* ALINHAMENTO DO CONTEUDO EXTRA */
-@media (max-width: 600px) and (min-width: 50px) {
-    aside > ul {
-        columns: 1;
-    }
-}
-
-/* LEITURA TELAS MEDIAS */
-@media (max-width: 550px) and (min-width: 50px) {
-    main h2 {
-        background-color: var(--cor7);
-        text-align: center;
-        border-radius: 5px;
-    }
-}
-
-/* CENTRALIZANDO PARA MELHOR LEITURA EM TELAS PEQUENAS */
 @media (max-width: 412px) and (min-width: 50px) {
-    header {
-        box-shadow: 0px 5px 5px #00000028;
-    }
-
-    header > p#titulo {
-        font-size: 1.2em;
-    }
-
     nav {
         max-width: 250px;
         margin: auto;
@@ -402,17 +363,39 @@ footer a:active {
         margin-top: 30px;
     }
 
-    main h1 {
-        text-align: center;
-        font-size: 1.8em;
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    main h2 {
+        text-align: left;
+        background-image: linear-gradient(to right, var(--cor7), white);
+    }
+
+    aside > ul {
+        columns: 2;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main {
+        max-width: 1000px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 3px 10px #00000053;
     }
 
     main h2 {
-        font-size: 1.1em;
+        text-align: left;
+        background-image: linear-gradient(to right, var(--cor7), white);
     }
 
-    main p {
-        font-size: 0.9em;
+    main > section > article p#despedida {
+        font-size: 1em;
     }
 
+    aside > ul {
+        columns: 2;
+    }
 }
