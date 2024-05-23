@@ -58,7 +58,7 @@ header {
 header > h1 {
     padding: 25px 20px 0px 20px;
     font-family: var(--fonte-titulo);
-    font-size: 3em;
+    font-size: 1.8em;
     font-weight: normaL;
     color: white;
     text-align: center;
@@ -72,7 +72,7 @@ header p {
     margin: auto;
     font-family: var(--fonte-quadrada);
     text-align: center;
-    font-size: 1.3em;
+    font-size: 0.8em;
     text-indent: 0px;
     line-height: 1.3em;
     word-spacing: 1px;
@@ -81,18 +81,18 @@ header p {
 
 nav {
     padding: 10px;
-    background-color: var(--cor4);
+    background-color: var(--cor1);
     box-shadow: 0px 2px 2px #00000028;
     transition-duration: 0.5s;
 }
 
 span#burger {
     display: block;
-    width: 150px;
-    padding: 10px;
+    width: 50px;
+    padding: 5px;
     background-color: black;
-    color: var(--cor7);
-    font-size: 2em;
+    color: white;
+    font-size: 1.5em;
     font-weight: bolder;
     text-align: center;
     border-radius: 10px;
@@ -100,7 +100,7 @@ span#burger {
 }
 
 span#burger:hover {
-    color: white;
+    color: var(--cor7);
     cursor: pointer;
 }
 
@@ -124,7 +124,7 @@ menu > ul > li > a { /* layout do menu */
     color: black;
     text-align: center;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 600; 
 }
 
@@ -146,7 +146,7 @@ main {
 main h1 {
     font-family: var(--fonte-android);
     font-weight: normal;
-    font-size: 1.8em;
+    font-size: 1.3em;
     color: var(--cor1);
     text-align: center;
 }
@@ -155,7 +155,7 @@ main h2 {
     padding: 4px;
     font-family: var(--fonte-android);
     font-weight: normal;
-    font-size: 1.3em;
+    font-size: 1em;
     background-color: var(--cor7);
     color: black;
     text-indent: 8px;
@@ -167,7 +167,7 @@ main p {
     margin: 15px 0px;
     text-align: justify;
     text-indent: 30px;
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 2em;
 }
 
@@ -233,7 +233,7 @@ main > section > article div.video > iframe {
 }
 
 main > section > article p#despedida {
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center;
     text-indent: 0px;
 }
@@ -247,7 +247,6 @@ aside {
 }
 
 aside p {
-    font-size: 1em;
     text-align: justify;
 }
 
@@ -273,10 +272,11 @@ aside a:hover {
 }
 
 aside > h3 {
-    background-color: var(--cor1);
-    color: white;
     padding: 10px;
     margin: -10px -10px 0px -10px;/* NEGATIVA ELE CRESCE PARA TRÁS */
+    font-size: 1em;
+    background-color: var(--cor1);
+    color: white;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -292,7 +292,7 @@ aside ul {
 }
 
 aside li {
-    font-size: 1.1em;
+    font-size: 0.9em;
     letter-spacing: 1px;
     transition-duration: 0.01s;
 }
@@ -343,63 +343,4 @@ footer a:hover {
 
 footer a:active {
     color: var(--cor3);
-}
-
-@media screen and (min-width:768px) {
-    main h2 {
-        text-align: left;
-        background-image: linear-gradient(to right, var(--cor7), white);
-    }
-
-    nav {
-
-        padding: 0px;
-    }
-
-    menu {
-        display: block;
-        margin: 0px;
-    }
-
-    span#burger {
-        display: none;
-        padding: 0px;
-    }
-
-    menu > ul > li > a {
-        display: block;
-        margin: 0px;
-    }
-
-    menu > ul > li > a:hover {
-        border-radius: 0px;
-    }
-
-    menu > ul > li {
-        display: inline-block;
-    }
-
-    aside > ul {
-        columns: 2;
-    }
-}
-
-@media screen and (min-width:1024px) {
-    main {
-        max-width: 1000px;
-        margin: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        border-radius: 10px;
-        box-shadow: 2px 3px 10px #00000053;
-    }
-
-    main h2 {
-        text-align: left;
-        background-image: linear-gradient(to right, var(--cor7), white);
-    }
-
-    main > section > article p#despedida {
-        font-size: 1em;
-    }
 }
