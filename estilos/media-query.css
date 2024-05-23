@@ -21,7 +21,7 @@
     }
 
     main p {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     nav {
@@ -80,6 +80,10 @@
     main h2 {
         text-align: left;
         background-image: linear-gradient(to right, var(--cor7), white);
+    }
+
+    main p {
+        font-size: 1em;
     }
 
     main > section > article p#despedida {
